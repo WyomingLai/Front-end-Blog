@@ -1,0 +1,198 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+
+@media screen and (min-width: 840px) {
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #header {
+        background-color:#bababa;
+        height: 90px;
+        padding: 0px;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #left-header {
+        width: 70%;
+        height: 100%;
+        color: black;
+        background-color: rgb(255, 255, 255);
+        line-height: 90px;
+        display: relative;
+    }
+    #header_nav {
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        right: 35%;
+    }
+    .section {
+        height: 100%;
+        padding: 0px 10px;
+        margin: 0px;
+        color: rgb(21, 21, 21);
+        text-decoration: none;
+        line-height: 90px;
+        float: left;
+    }
+    #hamBar{
+        display: none;
+        width: 60px;
+        text-align: center;
+        line-height: 90px;
+        float: left;
+      }
+    #right-header {
+        width: 30%;
+        height: 100%;
+        color: white;
+        background-color: #6d7c67;
+        line-height: 90px;
+        text-align: center;
+    }
+
+    #main {
+        width: 70%;
+        height: 100%;
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+        position: fixed;
+        top: 90px;
+        left: 0px;
+    }
+    
+    #side {
+        width: 30%;
+        height: 100%;
+        background-color: #6d7c67;
+        text-align: center;
+        position: fixed;
+        top: 90px;
+        left: 70%;
+    }
+    #logo {
+        padding: 0px 70px;
+        font: bold x-large/75px 'Noto Sans TC', sans-serif;
+        line-height: 90px;
+        text-decoration: none;
+        color: rgb(21, 21, 21);
+        float: left;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #header {
+        background-color:#bababa;
+        height: 90px;
+        padding: 0px;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #left-header {
+        width: 100%;
+        height: 100%;
+        color: black;
+        background-color: rgb(255, 255, 255);
+        line-height: 90px;
+        display: relative;
+    }
+    #header_nav {
+        display: none;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        right: 35%;
+    }
+    .section {
+        height: 100%;
+        padding: 0px 10px;
+        margin: 0px;
+        color: rgb(21, 21, 21);
+        text-decoration: none;
+        line-height: 90px;
+        float: left;
+    }
+    #hamBar{
+        width: 60px;
+        text-align: center;
+        line-height: 90px;
+        position: absolute;
+        top: 0px;
+        right: 5%;
+        float: left;
+      }
+    #right-header {
+        display: none;
+        width: 30%;
+        height: 100%;
+        color: white;
+        background-color: #6d7c67;
+        line-height: 90px;
+        text-align: center;
+    }
+
+    #main {
+        width: 100%;
+        height: 100%;
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+        position: fixed;
+        top: 90px;
+        left: 0px;
+    }
+    
+    #side {
+        display: none;
+        width: 30%;
+        height: 100%;
+        background-color: #6d7c67;
+        text-align: center;
+        position: fixed;
+        top: 90px;
+        left: 70%;
+    }
+    #logo {
+        padding: 0px 70px;
+        font: bold x-large/75px 'Noto Sans TC', sans-serif;
+        line-height: 90px;
+        text-decoration: none;
+        color: rgb(21, 21, 21);
+        float: left;
+    }
+}
+
+
+
+
+
+p {font-family: 'Noto Sans TC', sans-serif;}
+a[href] {font-family: 'Noto Sans TC', sans-serif;}
+.section:hover {
+    color:#ffffff;
+    background-color: #a8b8a0f4;
+}
+#home-content {
+    width: 70%;
+    margin: 100px auto;
+    text-align: left;
+}
+

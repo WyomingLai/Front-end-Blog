@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang='zh_TW'>
+<head>
+    <link href="JavaScript&jQueryCSS.css" rel="stylesheet" type="text/css">
+    <meta charset='utf-8'/>
+    <title>前端的基礎工具Front-end Basic Tools</title>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <a href="JavaScript&jQuery.html" id="logo">Front-end Basic Tools</a>
+        </div>
+
+        <div id="sidebar">
+            <a href="#認識JavaScript">認識JavaScript</a>
+            <ul>
+                <li><a href="#建立JavaScript">建立JavaScript</a></li>
+                <li><a href="#基本語法與結構">基本語法與結構</a></li>
+                <li><a href="#JavaScript的運算子">運算子</a></li>
+                <li><a href="#JavaScript的流程控制">流程控制</a></li>
+                <li><a href="#JavaScript函式、陣列與物件">函式、陣列與物件</a></li>
+                <li><a href="#文件物件模型">文件物件模型</a></li>
+            </ul><br>
+            <a href="#認識jQuery">認識jQuery</a>
+            <ul>
+                <li><a href="#ttt">chapter1</a></li>
+                <li><a href="#ttt">chapter2</a></li>
+                <li><a href="#ttt">chapter3</a></li>
+            </ul><br>
+            <a href="JavaScript&jQuery.html">回首頁</a>
+        </div>
+
+        <div id="main-content">
+            <div class="chapter" id="認識JavaScript">
+                <h2>認識JavaScript</h2><hr>
+                <p>在網頁中，HTML是建置網頁的基礎，CSS是網頁呈現的技術，而JavaScript則是網頁互動功能的關鍵。JavaScript是一種腳本式的程式語言，期代碼在客戶端執行前
+                    不需要編譯，而是將文字格式的代碼傳給瀏覽器並由瀏覽器解譯執行。然而這種直譯式語言的<b>安全性較差</b>，每個人都能獲得原始碼內容。
+                </p>
+            </div><br><br><br><br>
+
+            <div class="chapter" id="建立JavaScript">
+                <h2>建立JavaScript程式</h2><hr>
+                <div class="paragraph">
+                    <h3 class="title" id="<script>標籤">&lt;script&gt;標籤</h3>
+                    <p>JavaScript是使用&lt;script&gt;標籤將程式碼加在HTML之中，瀏覽器只要讀取到&lt;script&gt;標籤便會利用直譯器來執行其中的程式：
+                        <pre>&lt;script type="text/javascript"&gt;<br>...<br>&lt;/script&gt;</pre>
+                        <p class="notes">＊ &lt;script&gt;中的type屬性是用來指定script的格式及類型，若是使用HTML5則可以省略type屬性。</p>
+                    </p>
+                </div>
+            </div><br><br><br><br>
+
+            <div class="chapter" id="基本語法與結構">
+                <h2>JavaScript的基本語法與結構</h2><hr>
+                <div class="paragraph">
+                    <h3 class="title">基本語法規則</h3>
+                    <p>在編寫JavaScript時必須依循下列語法規定：</p>
+                    <h3>英文大小寫的不同：</h3>
+                    <div style="padding:0px 30px; margin:0px;"><p>在JavaScript中設定變數或常數時，英文大小寫是不同的。另外，JavaScript中的敘述及函式名稱都<b>必須為小寫</b>，否則無法執行該功能。</p></div>
+                    <h3>空白字元：</h3>
+                    <div style="padding:0px 30px; margin:0px;"><p>JavaScript會自動忽略多餘的空白字元。</p></div>
+                    <h3>結尾分號：</h3>
+                    <div style="padding:0px 30px; margin:0px;"><p>JavaScript中每一行結束時並無強制規定要加上「;」，但若要將多個敘述寫在同一行中時則需要以分號間隔。</p></div>
+                    <h3>註解符號：</h3>
+                    <div style="padding:0px 30px; margin:0px;"><p>JavaScript中使用「//」標示單行註解，也能用「/*.....*/」加上多行註解。</p></div>
+                    <h3>保留字：</h3>
+                    <div style="padding:0px 30px; margin:0px;"><p>在設定變數時應避開保留字。JavaScript常用的保留字有：break、default、function、return、var、case、void、debugger、new、throw、this、catch、const、finally、let、delete、switch..等。</p></div>
+                </div>
+                <div class="paragraph">
+                    <h3 class="title">變數命名與宣告</h3><br>
+                    <h3>變數的宣告：</h3>
+                    <p>
+                        在JavaScript中是使用「var」來宣告變數，也能在單行之中宣告多個變數：
+                        <pre>var firstvar<br>var secondvar, thirdvar;</pre>
+                    </p><br>
+                    <h3>變數的命名：</h3>
+                    <p>
+                        JavaScript中對於變數的命名除了需要注意<b>英文大小寫</b>以及<b>避開保留字</b>以外，變數名稱的<b>長度是沒有限制字數的</b>、
+                        <b>變數名稱的起始字元只能使用英文或「_ 」符號</b>、變數名稱裡<b>不能使用「.」也無法用中文命名</b>。<br>以下為幾個<b>錯誤命名</b>的範例：
+                        <pre>1var   //以數字開頭<br>變數1   //以中文命名<br>var.1   //不能使用「.」</pre>
+                    </p><br>
+                    <h3>設定變數值：</h3>
+                    <p>
+                        JavaScript中的變數資料可以是<b>字串、數值、布林值</b>..等。在宣告變數時可以用「=」指定變數的值：
+                        <pre>var name = "Banana博士"    //字串需以「"」包覆<br>var yellow = true<br>var length = 3.1415, unit = "meter"</pre>
+                    </p>
+                </div>
+            </div><br><br><br><br>
+
+            <div class="chapter" id="JavaScript的運算子">
+                <h2>JavaScript的運算子</h2><hr>
+                <div class="paragraph">
+                    <h3 class="title">算術運算子</h3>
+                    <p>JavaScript中的算數運算子適用一般四則運算的規則：<b>加(+)、減(-)、乘(*)、除(/)</b>。而其他還有<b>餘數(%)、遞增(++)、遞減(--)</b>等，如下：
+                        <pre>8%7    //輸出為1<br>a=1; a++;  //輸出為2<br>b=8; 8--;  //輸出為7</pre>
+                    </p>
+                </div>
+                <div class="paragraph">
+                    <h3 class="title">邏輯運算子</h3>
+                    <p>邏輯運算子會將算式兩邊進行比較，再將結果以<b>布林值</b>回傳。</p>
+                    <div id="example-logical-operator">
+                        <p>邏輯運算子：
+                            <select id="logical-operator" onchange="operatorNote()">
+                                <option value="==">==</option>
+                                <option value="===">===</option>
+                                <option value="!=">!=</option>
+                                <option value="!===">!===</option>
+                                <option value="<">&lt;</option>
+                                <option value=">">&gt;</option>
+                                <option value="<=">&lt;=</option>
+                                <option value=">=">&gt;=</option>
+                                <option value="&&">&&</option>
+                                <option value="||">||</option>
+                                <option value="彩蛋">彩蛋</option>
+                            </select>
+                            &nbsp&nbsp&nbsp&nbsp代表：<span id="operatorNoteResult">當兩者相等時成立。</span>
+                            <p class="notes">＊後來新增了「Object.is」運算子，和「===」一樣但會將「NaN」、「-0」和「+0」獨立處理，因此這三個不會相等。當Object.is(NaN, NaN) 會回傳true。而用「==」或「===」比較兩個NaN時則會回傳false。</p>
+                        </p>
+                    </div>
+                    <script>
+                        function operatorNote(){
+                        var operator = document.getElementById("logical-operator").value;
+                        if (operator == "==") {document.getElementById("operatorNoteResult").innerHTML="當兩者相等時成立。";} 
+                        else if (operator == "===") {document.getElementById("operatorNoteResult").innerHTML="當兩者相等且型別一樣時成立。";} 
+                        else if (operator == "!=") {document.getElementById("operatorNoteResult").innerHTML="當兩者不相等時成立。";} 
+                        else if (operator == "!===") {document.getElementById("operatorNoteResult").innerHTML="當兩者不相等或型別不一樣時成立。";} 
+                        else if (operator == "<") {document.getElementById("operatorNoteResult").innerHTML="當前者小於後者時成立。";} 
+                        else if (operator == ">") {document.getElementById("operatorNoteResult").innerHTML="當前者大於後者時成立。";} 
+                        else if (operator == "<=") {document.getElementById("operatorNoteResult").innerHTML="當前者小於或等於後者時成立。";} 
+                        else if (operator == ">=") {document.getElementById("operatorNoteResult").innerHTML="當前者大於或等於後者時成立。";} 
+                        else if (operator == "&&") {document.getElementById("operatorNoteResult").innerHTML="當兩者皆為true時成立。";} 
+                        else if (operator == "||") {document.getElementById("operatorNoteResult").innerHTML="兩者之中有任何一個為true時成立。";} 
+                        else {document.getElementById("operatorNoteResult").innerHTML="騙你的拉";}
+                        }
+                    </script>
+                </div>
+            </div><br><br><br><br>
+
+            <div class="chapter" id="JavaScript的流程控制">
+                <h2>JavaScript的流程控制</h2><hr>
+                <div class="paragraph">
+                    <h3 class="title">if / else 條件控制</h3><br>
+                    <h3>if 單向選擇條件控制：</h3>
+                    <p>
+                        若只需要<b>單項選擇</b>的條件，即若滿足某條件則執行某程式內容，此為最單純的條件控制，基本格式如下：
+                        <pre>if (條件式) 執行程式的內容;</pre>
+                        若執行程式內容不是單行，就必須用大括號將程式區塊包起來：
+                        <pre>if (條件式) {<br>      執行程式的內容;<br>}</pre>
+                    </p><br>
+                    <h3>if / else 雙向選擇條件控制：</h3>
+                    <p>
+                        當條件成立時執行某程式區塊，不成立時則執行另一個區塊：
+                        <pre>if (條件式) {<br>    條件成立時執行的程式內容;<br>}<br>else {<br>    條件不成立時執行的程式內容;<br>}</pre>
+                        在JavaScript中可以使用「<b>? :</b>」來實現if/else的功能：
+                        <pre>(條件式) ? 條件成立時執行的程式內容 : 條件不成立時執行的程式內容;</pre> 
+                    </p><br>
+                    <h3>else if 多項選擇條件控制：</h3>
+                    <pre>if (條件式1) {<br>    條件1成立時執行的程式內容;<br>}<br>else if (條件式2) {<br>    條件2成立時執行的程式內容;<br>}<br>...<br>else {<br>    所有條件皆不成立時執行的程式內容;<br>}</pre><br>
+                    <h3>switch 多項選擇條件控制：</h3>
+                    <p>
+                        switch會定義一個自訂變數，當該變數與下列某個case中的條件值相同時則執行該case的程式區塊：
+                        <pre>switch (自訂變數) {<br>    case 條件值1:<br>        自訂變數===條件值1時執行的程式內容;<br>        break;<br>    case 條件值2:<br>        自訂變數===條件值2時執行的程式內容;<br>        break;<br>    ...<br>    default:<br>        當自訂變數與所有條件值皆不相等時預設執行的程式內容;<br>}</pre>
+                        <p class="notes">＊自訂變數與條件值的資料型態要一致，default的程式區塊不是必填。</p>
+                    </p>
+                </div>
+                <div class="paragraph">
+                    <h3 class="title">迴圈控制</h3><br>
+                    <h3>while 迴圈：</h3>
+                    <p>
+                        while是最基本的迴圈，當符合條件時執行指定的程式，直到不符合條件時才跳出迴圈：
+                        <pre>while (條件式) {<br>    執行的程式內容;<br>}</pre>
+                        do/while迴圈與while迴圈幾乎是一樣的，只差在前者會先執行迴圈內的程式，執行完後才判斷是否符合條件：
+                        <pre>do {<br>    執行的內容;<br>}<br>while (條件式)</pre>
+                    </p><br>
+                    <h3>for 迴圈：</h3>
+                    <p>
+                        for計次迴圈是先設定一個變數的初始值，再設定條件，最後是變數的計次方式。如下：
+                        <pre>for (設定變數初值; 條件式; 變數計次方式) {<br>    執行的程式內容;<br>}</pre>
+                    </p>
+                </div>
+            </div><br><br><br><br>
+            <div class="chapter" id="JavaScript函式、陣列與物件">
+                <h2>JavaScript 函式、陣列與物件</h2><hr>
+                <div class="paragraph">
+                    <h3 class="title">function 函式</h3>
+                    <p>
+                        在攥寫程式時常遇到許多相同的動作，此時可以將這些經常使用或重複的程式整理成一個函式，在程式中隨時呼叫，這樣在閱讀或是維護上將會更為輕鬆。定義函式的基本語法為：
+                        <pre>function 函式名稱 ([參數1、參數2、...、參數n]) {<br>    執行的程式內容;<br>    [return 回傳值;]<br>}</pre>
+                        在程式中呼叫函式的語法為：
+                        <pre>函式名稱 ([參數1、參數2、...、參數n]);</pre>
+                        <p class="notes">＊函式的命名規則與變數相同。當函式不需要回傳值時可以省略return。</p>
+                    </p>
+                </div>
+                <div class="paragraph">
+                    <h3 class="title">array 陣列</h3><br>
+                    <h3>建立一維陣列：</h3>
+                    <p>
+                        當程式中有大量同類型的資料需要儲存時，若宣告大量的變數，不但耗時且執行效率也不佳。而陣列是一群相同性質的變數集合，陣列中的每一份資料皆為<b>陣列元素</b>。
+                        在預設狀況下，陣列會使用<b>index</b>(可以是整數或字串，預設為從0開始計算)來選取陣列中的元素。以下為範例：
+                        <pre>var album = new Array(11);<br>album[0] = "Coda";<br>album[1] = "LOST AND FOUND";<br>album[2] = "Answer is near";<br>...<br>album[10] = "Kimishidai Ressha";</pre>
+                        也可以在建立物件時直接指派元素值：
+                        <pre>var album = new Array("Coda", "LOST AND FOUND", "Answer is near",...,"Kimishidai Ressha");</pre>
+                        也可以直接使用[]符號來建立陣列：
+                        <pre>var album = ["Coda", "LOST AND FOUND", "Answer is near",...,"Kimishidai Ressha"];</pre>
+                    </p><br>
+                    <h3>建立多維陣列：</h3>
+                    <p>
+                        建立多維陣列的方式是先由一維陣列組成二維陣列，再架構到多維的陣列。例如：
+                        <pre>var album = new Array();<br>album[0] = ["Coda", "0:50"]<br>album[1] = ["LOST AND FOUND", "3:02"]<br>album[2] = ["Answer is near", "3:39"]<br>...<br>album[10] = ["Kimishidai Ressha", "4:14"]</pre>
+                    </p><br>
+                    <h3>取用陣列資料：</h3>
+                    <p>
+                        建立好陣列後，可以利用<b>index</b>來取得其中的值，以下為完整範例：
+                    </p>
+                    <pre>&lt;div id="ShowAlbumDetails"&gt;&lt;/div&gt;<br>&lt;script&gt;
+    var album = new Array();<br>    album[0] = ["Coda", "0:50"]<br>    album[1] = ["LOST AND FOUND", "3:02"]<br>    album[2] = ["Answer is near", "3:39"]<br>    album[3] = ["NO SCARED", "3:38"]<br>    album[4] = ["C.h.a.o.s.m.y.t.h.", "5:18"]<br>    album[5] = ["Mr.gendai Speaker", "3:53"]<br>    album[6] = ["Seken shirazu no unchuhikoushi", "3:31"]<br>    album[7] = ["Re:make", "3:24"]<br>    album[8] = ["Pierce", "4:24"]<br>    album[9] = ["Let's take it someday", "3:40"]<br>    album[10] = ["Kimishidai Ressha", "4:14"]<br>
+    //在目標元素中新建一個&lt;table&gt;
+    document.getElementById("ShowAlbumDetails").innerHTML=
+        "&lt;table id='example-array'&gt;&lt;tr&gt;&lt;td&gt;歌名&lt;/td&gt;&lt;td&gt;長度&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;";<br>
+    //取得容器
+    var Albumdetails = document.getElementById('example-array');<br>
+    for (i=0; i&lt;album.length; i++) {
+        //建立新的&lt;tr&gt;元素
+        var Newtr = document.createElement('tr');<br>
+        for (j=0; j&lt;album[j].length; j++) {
+            //建立新的&lt;td&gt;元素
+            var Newtd = document.createElement('td');
+            //建立新的文字節點
+            var Newnode = document.createTextNode(album[i][j]);
+            //透過 appendChild 將 Newnode 加入至 Newtd
+            Newtd.appendChild(Newnode);
+            //透過 appendChild 將 Newtd 加入至 Newtr
+            Newtr.appendChild(Newtd);
+        }
+        //透過 appendChild 將 Newtr 加入至 Albumdetails
+        Albumdetails.appendChild(Newtr);
+    }
+&lt;/script&gt;</pre>
+                    <div id="ShowAlbumDetails"></div>
+                    <script>
+                        var album = new Array();
+                        album[0] = ["Coda", "0:50"]
+                        album[1] = ["LOST AND FOUND", "3:02"]
+                        album[2] = ["Answer is near", "3:39"]
+                        album[3] = ["NO SCARED", "3:38"]
+                        album[4] = ["C.h.a.o.s.m.y.t.h.", "5:18"]
+                        album[5] = ["Mr.gendai Speaker", "3:53"]
+                        album[6] = ["Seken shirazu no unchuhikoushi", "3:31"]
+                        album[7] = ["Re:make", "3:24"]
+                        album[8] = ["Pierce", "4:24"]
+                        album[9] = ["Let's take it someday", "3:40"]
+                        album[10] = ["Kimishidai Ressha", "4:14"]
+                        document.getElementById("ShowAlbumDetails").innerHTML="<table id='example-array'><tr><td>歌名</td><td>長度</td></tr></table>";
+                        var Albumdetails = document.getElementById('example-array');
+                        for (i=0; i<album.length; i++) {
+                            var Newtr = document.createElement('tr');
+                            for (j=0; j<album[j].length; j++) {
+                                var Newtd = document.createElement('td');
+                                var Newnode = document.createTextNode(album[i][j]);
+                                Newtd.appendChild(Newnode);
+                                Newtr.appendChild(Newtd);
+                            }
+                            Albumdetails.appendChild(Newtr);
+                        }
+                    </script>
+                </div>
+                <div class="paragraph">
+                    <h3 class="title">object 物件</h3>
+                    <p>
+                        JavaScript是物件導向的程式語言，但在JavaScript中沒有class的概念，因為JavaScript中幾乎所有東西都是物件。物件是<b>屬性</b>跟<b>方法</b>
+                        的組合，例如人有姓名、年齡、身高等，這些都是人的屬性 ; 而人可以唱歌、跳舞等這些便是人的方法。以程式來舉例：要得到上一節album陣列中的元素數量可以使用：
+                        <pre>album.length;    //length屬性的使用</pre>
+                        而若要將指定的訊息顯示在頁面上或彈出式視窗，可以使用：
+                        <pre>document.write('日本的壓縮機');    //write()方法的使用<br>window.alert('非常稀少');         //alert()方法的使用</pre>
+                        <p class="notes">＊物件皆能以「.」來使用屬性或方法，而屬性跟方法的區分則是以後方有無()括號。</p>
+                    </p><br>
+                    <h3>建立自訂物件：</h3>
+                    <p>
+                        <pre>var Person = {name:"Mr.Banana", age:69, height=87};</pre>
+                        也可以將建立物件的動作化為函式：
+                        <pre>function Person(name, age, height) {<br>    this.name = name;<br>    this.age = age;<br>    this.height = height;<br>}<br>person1 = new Person("Mr.Banana", 69, 87);    //新增一個Person物件</pre>
+                    </p><br>
+                    <h3>建立物件方法：</h3>
+                    <p>
+                        <pre>var Person = {name:"Mr.Banana", age:69, height=87, <br>    SelfIntroduction:function() {return "My name is "+name;}<br>};</pre>
+                        也可以在建立物件函式中加入自訂的方法：
+                        <pre>function Person(name, age, height) {<br>    this.name = name;<br>    this.age = age;<br>    this.height = height;<br>    this.SelfIntroduction = function() {return "My name is "+name;}<br>};</pre>
+                    </p>
+                </div><br><br><br><br>
+
+            <div class="chapter" id="文件物件模型">
+                <h2>DOM 文件物件模型</h2><hr>
+                <p>
+                    在DOM的標準下，文件中所有的標籤都是一個物件，這些物件以文件定義的結構形成一個樹狀結構。而在HTML中，每一個標籤及內容也可以被視為一個節點(Node)，各節點相連出一個樹狀結構。
+                    因此只要善用DOM的概念就能在快速的在文件中找到要處理的部份進而存取。在JavaScript中可以使用getElementById()及getElementsByTagName()來找到HTML中指定的元素：
+                </p>
+                <div class="paragraph">
+                    <h3 class="title">getElementById()</h3>
+                    <p>
+                        getElementById()是用來找到指定<b>id屬性</b>的元素：
+                        <pre>document.getElementById("id名稱")</pre>
+                    </p>
+                </div>
+                <div class="paragraph">
+                    <h3 class="title">getElementsByTagName()</h3>
+                    <p>
+                        getElementsByTagName()是用來找到指定的<b>標籤名稱</b>元素，因為網頁上相同的標籤名稱通常不只一個，所以回傳值會是一個陣列：
+                        <pre>document.getElementsByTagName("tag名稱")</pre>
+                    </p>
+                </div>
+                <h3>範例：</h3>
+                <pre>
+&lt;div id="albumDisplay"&gt;&lt;/div&gt;
+&lt;script&gt;
+    var showTable = document.getElementById("albumDisplay")
+    var albumTable = document.getElementById("example-array")
+    var albumDetails = albumTable.getElementsByTagName("td")
+    var msg = ""
+    for(i=0; i&lt;albumDetails.length; i++) {
+        msg += albumDetails[i].innerHTML+"&lt;br&gt;";
+    }
+    showTable.innerHTML = msg
+&lt;/script&gt;</pre>
+
+                <div id="albumDisplay"></div>
+                <script>
+                    var showTable = document.getElementById("albumDisplay")
+                    var albumTable = document.getElementById("example-array")
+                    var albumDetails = albumTable.getElementsByTagName("td")
+                    var msg = ""
+                    for(i=0; i<albumDetails.length; i++) {
+                        msg += albumDetails[i].innerHTML+"<br>";
+                    }
+                    showTable.innerHTML = msg
+                </script>
+
+
+
+
+            <br><br><br><br><br><br>
+            <div class="chapter" id="認識jQuery">
+                <h2>認識jQuery</h2><hr>
+                <p>中文會自動換行中文會自動換行中文會自動換行中文會自動換行中文會自動換行中文會自動換行中文會自動換行中文會自動換行中文會自動換行中文會自動換行中文會自動換行</p>
+
+            </div>
+        </div>
+    </div><br><br><br><br>
+</body>

@@ -1,0 +1,171 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+p {font-family: 'Noto Sans TC', sans-serif;}
+a[href] {font-family: 'Noto Sans TC', sans-serif;}
+h3.FormTitle {color: gray}
+pre {
+    overflow: scroll;
+    background-color: #e7e7e7;
+    padding: 20px;
+}
+
+#main-layout {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+#CSS基礎入門LOGO {
+    padding: 0px 0px 0px 20px;
+    margin: 0px;
+    height: 75px;
+    width: 100%;
+    line-height: 75px;
+    background-color: #73c2cd;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+#main-layout-contents-list {
+    padding: 10px;
+    width: 240px; 
+    height: 100%;
+    overflow: scroll;
+    background-color: #defafd;
+    position: fixed;
+    top: 75px;
+    left: 0px;
+}
+#main-layout-contents-list li {
+    line-height: 25px;
+}
+
+
+#main-layout-contents {
+    padding: 5px 30px;
+    width: 80%; 
+    height: 100%;
+    overflow: scroll;
+    background-color: #ffffff;
+    position: fixed;
+    top: 75px;
+    left: 220px;
+}
+
+h3 {
+    color: #FF0000;
+    clear: both;
+}
+
+
+
+td:nth-child(1) {text-align:center;}
+td:nth-child(2) {text-align:left;}
+tr:nth-child(even) {background-color: rgb(247, 255, 255);}
+tr:first-child {background-color: rgb(210, 217, 222);}
+
+figure {text-align: center;}
+figure.box-model-img {display: inline-block;}
+
+#example-top:link {color: gray}
+#example-top:visited {color: green}
+#example-top:hover {color: rgb(255, 136, 24)}
+#example-top:active {color: rgb(243, 119, 233)}
+#example-fontsize {font-variant: small-caps;}
+div.example-transform {
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin: 10px 45px;
+    line-height: 100px;
+    font-family: 'Noto Sans TC', sans-serif;
+    text-align: center;
+    border: 1px solid black;
+    background-color: #cacaca;
+}
+#example-transform0 {position: relative;}
+#example-translate0 {width: 100px; height: 100px; margin: 10px 45px; border: 1px dashed black; position: absolute; top: 0px; left: 0px;}
+#example-translate {transform: translate(10px, 20px);}
+#example-scale {transform: scale(1.5, 0.5);}
+#example-rotate {transform: rotate(45deg);}
+#example-skew00 {position: relative; float: left;}
+#example-skew0 {width: 100px; height: 100px; margin: 10px 45px; border: 1px dashed black; position: absolute; top: 0px; left: 0px;}
+#example-skew {transform: skew(25deg, 35deg);}
+
+#example-transform-origin00 {position:relative; clear: both;}
+#example-transform-origin0 {width: 150px; height: 150px; margin: 10px 87px; border: 1px dashed black; position: absolute; top: 0px; left: 0px;}
+#example-transform-origin {
+    width: 150px;
+    height: 150px;
+    margin: 10px 87px;
+    border: 1px solid black;
+    background-color: #cacaca;
+    position: absolute; 
+    top: 0px; 
+    left: 0px;
+    transform-origin: left top;
+    transform: rotate(20deg);
+}
+#example-transition {
+    width: 100px;
+    height:100px;
+    background-color: #cacaca;
+    border: 1px solid black;
+    line-height: 100px;
+    text-align: center;
+    font-family: 'Noto Sans TC', sans-serif;
+    transition-duration: 0.5s;
+    transition-property: width;
+    transition-timing-function: ease;
+    transition-delay: 0.2s;
+}
+#example-transition:hover {width: 420px;}
+#example-transition1 {
+    width: 100px;
+    height:100px;
+    background-color: #cacaca;
+    border: 1px solid black;
+    line-height: 100px;
+    text-align: center;
+    font-family: 'Noto Sans TC', sans-serif;
+    transition: 0.5s width , 0.5s background-color 0.5s;
+}
+#example-transition1:hover {width: 420px; background-color: sandybrown;}
+
+
+@keyframes tripping {
+    0% {background: repeating-radial-gradient(closest-side, red 10%, yellow 20%, green 30%, blue 40%, purple 50%);}
+    25% {background: repeating-radial-gradient(closest-side, yellow 10%, green 20%, blue 30%, purple 40%, red 50%);}
+    50% {background: repeating-radial-gradient(closest-side, green 10%, blue 20%, purple 30%, red 40%, yellow 50%);}
+    75% {background: repeating-radial-gradient(closest-side, blue 10%, purple 20%, red 30%, yellow 40%, green 50%);}
+    100% {background: repeating-radial-gradient(closest-side, purple 10%, red 20%, yellow 30%, green 40%, blue 50%);}
+}
+#example-animation-container {position: relative;}
+#example-animation-front {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+#example-animation-left {
+    position: absolute;
+    top: 100px;
+    left: 52px;
+    width: 70px;
+    height: 60px;
+    animation: tripping 0.5s ease reverse infinite;
+}
+#example-animation-right {
+    position: absolute;
+    top: 118px;
+    left: 148px;
+    width: 70px;
+    height: 60px;
+    animation: tripping 0.5s ease reverse infinite;
+}
+#example-animation-front:hover {
+    animation: tripping 0.5s ease reverse infinite paused;
+}
+
+
