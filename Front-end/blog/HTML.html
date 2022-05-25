@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang='zh_TW'>
+<head>
+    <link href="MainContent.css" rel="stylesheet" type="text/css">
+    <meta charset='utf-8'/>
+    <title>HTML5</title>
+</head>
+
+<body>
+    <div class="Header">
+        <a href="Front-end_Basic_Tools.html"><b>F</b>ront-end <b>B</b>asic</a>
+        <ul class="Header-sections">
+            <li class="Header-section HTML"><a href="HTML.html">HTML</a></li>
+            <li class="Header-section CSS"><a href="CSS.html">CSS</a></li>
+            <li class="Header-section JavaScript"><a href="JavaScript.html">JavaScript</a></li>
+            <li class="Header-section Python"><a href="#Python">Python</a></li>
+        </ul>
+    </div>
+
+    <div class="Container">
+        <div class="Sidebar">
+            <a href="" id="SidebarHTMLLink">HTML</a><br>
+            <a href="#HTML5結構與文字段落">結構與文字段落</a>
+            <ul>
+                <li><a href="#<p>">&lt; p &gt;</a></li>
+                <li><a href="#<pre>">&lt; pre &gt;</a></li>
+                <li><a href="#<blockquote>">&lt; blockquote &gt;</a></li>
+                <li><a href="#<ol>、<ul>、<li>">&lt; ol &gt;、&lt; ul &gt;、&lt; li &gt;</a></li>
+                <li><a href="#<dl>、<dt>、<dd>">&lt; dl &gt;、&lt; dt &gt;、&lt; dd &gt;</a></li>
+                <li><a href="#<span>、<div>">&lt; span &gt;、&lt; div &gt;</a></li>
+                <li><a href="#註解">&lt;!--註解--&gt;</a></li>
+                <li><a href="#文字格式">文字格式</a></li>
+            </ul><br>
+            <a href="#HTML5超連結、圖片與影音">超連結、圖片與影音</a>
+            <ul>
+                <li><a href="#路徑">路徑</a></li>
+                <li><a href="#超連結<a href>">超連結 &lt; a href &gt;</a></li>
+                <li><a href="#圖片<img>">圖片 &lt; img &gt;</a></li> 
+                <li><a href="#圖片說明<figcaption>">圖片說明 &lt; figcaption &gt;</a></li>
+                <li><a href="#音效<audio>">音效 &lt; audio &gt;</a></li>
+                <li><a href="#影片<video>">影片 &lt; video &gt;</a></li>
+            </ul><br>
+            <a href="#HTML5表格與表單">表格與表單</a>
+            <ul>
+                <li><a href="#表格<table>">表格 &lt; table &gt;</a></li>
+                <li><a href="#合併儲存格">合併儲存格</a></li>
+                <li><a href="#表單<form>">表單 &lt; form &gt;</a></li> 
+                <li><a href="#輸入欄位<input>">輸入欄位 &lt; input &gt;</a></li>
+                <li><a href="#輸入欄位的標籤">輸入欄標籤 &lt; label &gt;</a></li>
+                <li><a href="#下拉式選單">下拉式選單</a></li>
+                <li><a href="#文字區域">文字區域 &lt; textarea &gt;</a></li>
+                <li><a href="#表單群組元件">表單群組 &lt; fieldset &gt;</a></li>
+                <li><a href="#HTML5新增的表單元件與屬性">其他表單元件與屬性</a></li>
+            </ul><br>
+            <a href="Front-end_Basic_Tools.html">回首頁</a>
+        </div>
+
+
+        <div class="Content"><br>
+            <h2 id="HTML5結構與文字段落">HTML5結構與文字段落</h2>
+            <hr>
+            <div class="Article">
+                <h3 id="<p>">&lt; p &gt;</h3>
+                <div class="Paragraph">
+                    <p>歡迎加入HTML5的行列</p>
+                </div>
+            </div>
+            
+            <div class="Article">
+                <h3 id="<pre>">&lt; pre &gt;</h3>
+                <div class="Paragraph">
+                    <pre>
+&lt;pre&gt;會顯示原始碼的內容
+    包含空格、換行、字型等
+        通常會應用在顯示原始碼上</pre>
+                </div>
+            </div>
+
+            <div class="Article">
+                <h3 id="<blockquote>">&lt; blockquote &gt;</h3>
+                <div class="Paragraph">
+                    <blockquote>
+                        &lt;blockquote&gt;包含的內容會在左右兩側加入縮排的距離
+                    </blockquote>
+                </div>
+            </div>
+
+            <div class="Article">
+                <h3 id="<ol>、<ul>、<li>">&lt; ol &gt;、&lt; ul &gt;、&lt; li &gt;</h3>
+                <div class="Paragraph">
+                    &lt;ol&gt;、&lt;li&gt;能顯示標籤及項目：<br>
+                    標籤內能加入屬性type='1'來設定樣式。
+                    <ol type="1">
+                        <li>type="1"，顯示1,2,3..</li>
+                        <li>type="A"，顯示A,B,C..</li>
+                        <li>type="a"，顯示a,b,c..</li>
+                        <li>type="I"，顯示I,II,III..</li>
+                        <li>type="i"，顯示i,ii,iii..</li>
+                    </ol>
+                    &lt;ul&gt;、&lt;li&gt;則是以符號顯示
+                    <ul>
+                        <li>項目1</li>
+                        <li>項目2</li>
+                        <li>項目3</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="Article">
+                <h3 id="<dl>、<dt>、<dd>">&lt; dl &gt;、&lt; dt &gt;、&lt; dd &gt;</h3>
+                <div class="Paragraph">
+                    &lt;dl&gt;、&lt;dt&gt;、&lt;dd&gt;能以表列方式用來顯示項目內容，<br>
+                    先以dl宣告使用表列方式
+                    <dl>
+                        <dt>dt：設定標題</dt>
+                        <dd>dd：設定內容</dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="Article">
+                <h3 id="<span>、<div>">&lt; span &gt;、&lt; div &gt;</h3>
+                <div class="Paragraph">
+                    &lt;span&gt;、&lt;div&gt; 能將多個範圍的內容群組起來，可以設定相同的屬性，也能套用相同的CSS來統一外觀<br>
+                    <div>值得注意的是div標籤的前後</div>會自動換行<span>，而span不會</span><br><br>
+                </div>
+            </div>
+            
+            <div class="Article">
+                <h3 id="註解">&lt;!--註解--&gt;</h3>
+                <div class="Paragraph">
+                    可以用 &lt;!--註解內容--&gt; 來加入註解
+                </div>
+            </div>
+
+            <div class="Article">
+                <h3 id="文字格式">文字格式</h3>
+                <div class="Paragraph">
+                    <ul>
+                        <li><b>&lt; b &gt;：粗體</b></li>
+                        <li><strong>&lt; strong &gt;：標示重點，與 &lt; b &gt; 一樣</strong></li>
+                        <li><i>&lt; i &gt;：斜體</i></li>
+                        <li><em>&lt; em &gt;：標示強調，與 &lt; i &gt; 一樣</em></li>
+                        <li><mark>&lt; mark &gt;：高亮表示</mark></li>
+                        <li><small>&lt; small &gt;：小型字</small></li>
+                        <li><s>&lt; s &gt;：刪除線</s></li>
+                        <li><del>&lt; del &gt;：刪除的內容，與 &lt; s &gt; 一樣</del></li>
+                        <li><u>&lt; u &gt;：字下線</u></li>
+                        <li><ins>&lt; ins &gt;：新增的內容，與 &lt; u &gt; 一樣</ins></li>
+                        <li>&lt; sub &gt;：<sub>下標字</sub></li>
+                        <li>&lt; sup &gt;：<sup>上標字</sup></li>
+                    </ul>
+                </div>
+            </div>
+
+            <br><br><br>
+
+            <h2 id="HTML5超連結、圖片與影音">HTML5超連結、圖片與影音</h2>
+            <hr>
+            <div class="Article">
+                <h3 id="路徑">路徑</h3>
+                <div class="Paragraph">
+                    路徑的表示方法方為<b>絕對路徑</b>及<b>相對路徑</b>
+                    <ul>
+                        <li>絕對路徑：</li>
+                        <pre>&lt;img src = "http://網址/檔案名稱"&gt;</pre>
+                        <li>相對路徑：</li>
+                        <ul>
+                            <li>同層資料夾：<pre>&lt;img src = "檔案名稱"&gt;</pre></li>
+                            <li>上層資料夾：<pre>&lt;img src = "../檔案名稱"&gt;</pre></li>
+                            <li>下層資料夾：<pre>&lt;img src = "資料夾名稱/檔案名稱"&gt;</pre></li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="Article">
+                <h3 id="超連結<a href>">超連結 &lt; a href &gt; </h3>
+                <div class="Paragraph">
+                    超連結須以 &lt; a &gt; 元素設定，語法如下：
+                    <pre>&lt;a href="連結資源位置" target="連結開啟方式"&gt; 顯示文字或圖片 &lt;/a&gt;</pre>
+                    <br>
+                    <table>
+                        <tr>
+                            <th width="20%" >屬性</th>
+                            <th>說明</th>
+                        </tr>
+                        <tr>
+                            <th>href</th>
+                            <td>
+                                <ol>
+                                    <li><b>網址</b>：網路網址或網頁必須加上通訊協定「http://」。</li>
+                                    <li><b>頁內</b>：連結頁內中使用id屬性命名的元素位置，使用「#id」可以捲動到該id名的位置。</li>
+                                    <li><b>站內網頁</b>：以目標頁面與目前頁面的相對路徑來連結到站內網頁「/下層資料夾/目標頁面」。</li>
+                                    <li><b>檔案</b>：檔案超連結會開啟另存新檔對話框，需使用網路檔案絕對路徑或是站內檔案的相對路徑。</li>
+                                    <li><b>電子郵件</b>：電子郵件會使用系統註冊之電子郵件軟體準備寄信，必須加上通訊協定「mailto:」，例如「mailto:YuMing@gmail.com」</li>
+                                    <li><b>FTP</b>：必須加上通訊協定「ftp://」，例如「ftp://ftp.YuMing.com.tw」</li>
+                                </ol>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>target</th>
+                            <td>
+                                <ol>
+                                    <li><b>"_blank"</b>：以新的瀏覽器視窗開啟。</li>
+                                    <li><b>"_parent"</b>：開啟在目前視窗中，若有框架會在上一層框架中開啟。</li>
+                                    <li><b>"_self"</b>：開啟在目前視窗或框架中，是預設值。</li>
+                                    <li><b>"_top"</b>：開啟在目前視窗中，若有框架會移除框架以整頁顯示。</li>
+                                    <li><b>"視窗名稱"</b>：開啟在指定名稱的視窗中。</li>
+                                </ol>
+                            </td>
+                        </tr>
+                    </table><br>
+                    <p class="notes"><b>＊回到最上方的頁面超連結</b>：若是頁內超連結所設定的id不存在，則會返回至頁面最上方。
+                        因此許多人使用此方法來回到最上方，語法如下：<pre>&lt;a href="#top"&gt; TOP &lt;/a&gt;</pre></p>
+                </div>
+            </div>
+
+            <div class="Article">
+                <h3 id="圖片<img>">圖片 &lt; img &gt;</h3>
+                <div class="Paragraph">
+                    <p>
+                        插入圖片語法為：
+                        <pre>&lt; img src="圖片檔案位置" width="寬度" hieght="高度" alt="圖片註解" &gt;</pre>
+                    </p>
+                </div>
+            </div>
+            <div class="Article">
+                <h3 id="圖片說明<figcaption>">圖片區域及說明 &lt; figure &gt;、&lt; figcaption &gt;</h3>
+                <div class="Paragraph">
+                    <p>
+                        一般圖片都能希望加上對應的說明，使用&lt; figure &gt;來標示圖片及說明文字的區域，再使用&lt; figcaption &gt;來加入說明文字：
+                    </p>
+                    <figure>
+                        <img src="img/figure_example.png" width="690" hieght="128" alt="figure example">
+                        <figcaption> (圖) figure中也能塞兩張圖片</figcaption>
+                    </figure>
+
+
+                    <br>
+                    <p>HTML支援GIF、JPG(JPEG)、PNG，選擇時需注意：</p>
+                    <ul>
+                        <li>一般使用JPG或PNG較能呈現豐富的色彩。</li>
+                        <li>一般的圖示、線條插圖、灰階圖、黑白圖，建議使用GIF。</li>
+                        <li>動畫圖使用GIF，PNG檔的動畫效果未被所有瀏覽器支援。</li>
+                        <li>目前只有GIF、PNG支援背景透明的效果。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="Article">
+                <h3 id="音效<audio>">音效 &lt; audio &gt;</h3>
+                <div class="Paragraph">
+                    <audio controls>
+                        <source src="media/估狗小姐愛說笑.mp3" type="audio/mpeg">
+                        這邊是所有瀏覽器都不支援時將會顯示的訊息
+                    </audio>
+                    <p>以下是使用音效元素呈現音效的標準語法：</p>
+                    <figure>
+                        <img src="img/audio_example.png" width="500" hieght="128" alt="audio example">
+                        <figcaption> &lt; source &gt; 可設定多個音效檔，瀏覽器會識別其支援的格式，並使用第一個</figcaption>
+                    </figure><br>
+                    <p>audio元素的屬性：</p>
+                    <table>
+                        <tr>
+                            <th>屬性</th>
+                            <th>說明</th>
+                        </tr>
+                        <tr>
+                            <th>autoplay</th>
+                            <td>只要下載足夠的資源，就會自動播放音效。</td>
+                        </tr>
+                        <tr>
+                            <th>controls</th>
+                            <td>為音效加上播放、暫停和音量等控制元件。</td>
+                        </tr>
+                        <tr>
+                            <th>loop</th>
+                            <td>是否循環播放。</td>
+                        </tr>
+                        <tr>
+                            <th>muted</th>
+                            <td>音效播放時先保持靜音。</td>
+                        </tr>
+                        <tr>
+                            <th>preload</th>
+                            <td>
+                                <ul>
+                                    <li>(none)：按下播放鍵才開始載入音效，可節省頻寬。</li>
+                                    <li>auto：無論是否播放，皆會載入音效</li>
+                                    <li>metadata：載入音效的資料，如播放進度、列表或長度等。</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <p>瀏覽器對音效檔格式的支援：</p>
+                    <table>
+                        <tr>
+                            <th>格式</th>
+                            <th>Firefox</th>
+                            <th>Chrome</th>
+                            <th>Opera</th>
+                            <th>Safari</th>
+                        </tr>
+                        <tr>
+                            <th>mp3</th>
+                            <th>Y</th>
+                            <th>Y</th>
+                            <th>Y</th>
+                            <th>Y</th>
+                        </tr>
+                        <tr>
+                            <th>wav</th>
+                            <th>Y</th>
+                            <th>Y</th>
+                            <th>Y</th>
+                            <th>Y</th>
+                        </tr>
+                        <tr>
+                            <th>ogg</th>
+                            <th>Y</th>
+                            <th>Y</th>
+                            <th>Y</th>
+                            <th>N</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="Article">
+                <h3 id="影片<video>">影片 &lt; video &gt;</h3>
+                <div class="Paragraph">
+                    <iframe src="https://drive.google.com/file/d/1PRBmdaRRfrqETgXfp4tBqhfi0nKMxt2Z/preview" width="640" height="410" ></iframe>
+                    </video>
+                    <p>以下是使用影片元素呈現影片的標準語法：</p>
+                    <figure>
+                        <img src="img/video_example.png" width="500" hieght="128" alt="video example">
+                        <figcaption> &lt; video &gt; 可設定多個影片檔，瀏覽器會識別其支援的格式，並使用第一個</figcaption>
+                    </figure><br>
+                    <p>video元素的屬性：</p>
+                    <table>
+                        <tr>
+                            <th>屬性</th>
+                            <th>說明</th>
+                        </tr>
+                        <tr>
+                            <th>width</th>
+                            <td>設定影片寬度。</td>
+                        </tr>
+                        <tr>
+                            <th>height</th>
+                            <td>設定影片高度。</td>
+                        </tr>
+                        <tr>
+                            <th>autoplay</th>
+                            <td>只要下載足夠的資源，就會自動播放音效。</td>
+                        </tr>
+                        <tr>
+                            <th>controls</th>
+                            <td>為影片加上播放、暫停和音量等控制元件。</td>
+                        </tr>
+                        <tr>
+                            <th>loop</th>
+                            <td>是否循環播放。</td>
+                        </tr>
+                        <tr>
+                            <th>muted</th>
+                            <td>音效播放時先保持靜音。</td>
+                        </tr>
+                        <tr>
+                            <th>preload</th>
+                            <td>
+                                <ul>
+                                    <li>(none)：按下播放鍵才開始載入影片，可節省頻寬。</li>
+                                    <li>auto：無論是否播放，皆會載入影片</li>
+                                    <li>metadata：載入影片的資料，如播放進度、列表或長度等。</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>瀏覽器對影片檔格式的支援：</p>
+                    <table>
+                        <tr>
+                            <th width="15%">格式</th>
+                            <th width="17%">IE</th>
+                            <th width="17%">Firefox</th>
+                            <th width="17%">Chrome</th>
+                            <th width="17%">Opera</th>
+                            <th width="17%">Safari</th>
+
+                        </tr>
+                        <tr>
+                            <th>mp4</th>
+                            <th>Y</th>
+                            <th>Y</th>
+                            <th>Y</th>
+                            <th>Y</th>
+                            <th>Y</th>
+                        </tr>
+                        <tr>
+                            <th>webm</th>
+                            <th>N</th>
+                            <th>Y</th>
+                            <th>Y</th>
+                            <th>Y</th>
+                            <th>Y</th>
+                        </tr>
+                        <tr>
+                            <th>ogg</th>
+                            <th>N</th>
+                            <th>Y</th>
+                            <th>Y</th>
+                            <th>Y</th>
+                            <th>N</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+
+            <br><br><br>
+            <h2 id="HTML5表格與表單">HTML5表格與表單</h2>
+            <hr>
+            <div class="Article">
+                <h3 id="表格<table>">表格 &lt; table &gt;</h3>
+                <div class="Paragraph">
+                    <p>以下是使用表格元素呈現影片的標準語法：</p>
+                    <figure>
+                        <img src="img/table_example.png" width="500" hieght="500" alt="table example">
+                        <figcaption> &lt; tr &gt;、&lt; th &gt;、&lt; td &gt; 裡也可以設定width、hieght等屬性。</figcaption>
+                    </figure><br>
+
+                    <table>
+                        <tr>
+                            <th>屬性</th>
+                            <th>說明</th>
+                        </tr>
+                        <tr>
+                            <th>width</th>
+                            <td>使用像素(px)或百分比(%)設定寬度。</td>
+                        </tr>
+                        <tr>
+                            <th>hieght</th>
+                            <td>使用像素(px)或百分比(%)設定高度。</td>
+                        </tr>
+                        <tr>
+                            <th>border</th>
+                            <td>使用像素(px)設定表格框線的寬度。</td>
+                        </tr>
+                        <tr>
+                            <th>cellspacing</th>
+                            <td>使用像素(px)設定儲存格之間的距離。</td>
+                        </tr>
+                        <tr>
+                            <th>cellpadding</th>
+                            <td>使用像素(px)設定儲存格內部的距離。</td>
+                        </tr>
+                    </table>
+                    <p><i><b>＊儲存格內文字不換行</b>：儲存格中的文字太長時會自動換行，若不希望自動換行可以使用nowrap屬性，語法如下：
+                        <pre>&lt;td <mark>nowrap</mark>&gt; 儲存格內文字內容 &lt;/td&gt;</pre></i></p>
+                </div>
+            </div>
+
+            <div class="Article">
+                <h3 id="合併儲存格">合併儲存格</h3>
+                <div class="Paragraph">
+                    <p>在&lt; td &gt;或&lt; th &gt;中可以設定colspan、rowspan屬性，分別代表水平合併、垂直合併。</p>
+                    <img src="img/table_example1.png" width="500" hieght="500" alt="合併儲存格 example">
+                    <table>
+                        <tr>
+                            <th colspan="2"> 合併2欄</th>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">合併2列</td>
+                            <td>第2欄第2列</td>
+                        </tr>
+                        <tr>
+                            <td>第2欄第3列</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+
+            <div class="Article">
+                <h3 id="表單<form>">表單 &lt; form &gt;</h3>
+                <div class="Paragraph">
+                    <p>
+                        網頁裡的表單必須建立在&lt; form &gt;...&lt; /form &gt;之中，按下送出後會將表單中所有資料一併傳送到指定目的地處理。<br>
+                        在同一個頁面中可以包含多個表單，但表單中無法包含另一個表單。表單基本語法如下：
+                        <pre>&lt;form action="資料傳送目的地(網址)" method="傳送方式"&gt; .. &lt;/form&gt;</pre>
+                        <ul>
+                            表單傳送資料的方式有「<b>GET</b>」及「<b>POST</b>」：
+                            <li><b>GET</b>：瀏覽器會前往action指定的網址，並將表單中的資料附在網址之後。網址與資料間用「?」分隔，欄位資料則會用「&」分隔。</li>
+                            <li><b>POST</b>：瀏覽器會前往action指定的網址，並將表單中的資料放置在HTTP的表頭中傳遞。</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+
+            <div class="Article">
+                <h3 id="輸入欄位<input>">文字、密碼及按鈕輸入欄位 &lt; input &gt;</h3>
+                <div class="Paragraph">
+                    <p>
+                        輸入欄位對應的資料格式很多，所以有許多不同的欄位類型，&lt; input &gt;的基本語法如下：
+                        <pre>&lt;input type="輸入欄位類型" name="欄位名稱" value="預設值"&gt;</pre>
+                    </p>
+                    <table >
+                        <tr>
+                            <th width="15%">屬性</th>
+                            <th>說明</th>
+                        </tr>
+                        <tr>
+                            <th>type</th>
+                            <td>
+                                <ul>
+                                    <li><b>text</b>：文字輸入欄。</li>
+                                    <li><b>password</b>：密碼輸入欄，輸入值會以星號或實心圓顯示。</li>
+                                    <li><b>radio</b>：單選鈕。</li>
+                                    <li><b>checkbox</b>：多選核取方塊。</li>
+                                    <li><b>button、submit、reset</b>：一般、送出、重置的按鈕。</li>
+                                    <li><b>hidden</b>：隱藏欄位。</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>name</th>
+                            <td>資料送出時會以「欄位名稱=資料值」的方式，因此欄位命名時建議要易於理解。</td>
+                        </tr>
+                        <tr>
+                            <th>value</th>
+                            <td>當沒有填寫資料即送出時，會以預設值做為傳送的資料值。</td>
+                        </tr>
+                    </table>
+                    <ul>
+                        <li><b>text</b>：若要設定欄位長度或限制輸入資料長度可以使用size及maxlength屬性，例如：
+                            <pre>&lt;p&gt;&lt;input type="text" name="username" size="20" maxlength="12"&gt;&lt;/p&gt;</pre></li>
+                        <li><b>password</b>：若輸入欄位是密碼即可使用，例如：
+                            <pre>&lt;p&gt;&lt;input type="password" name="passwd" size="20" maxlength="12"&gt;&lt;/p&gt;</pre></li>
+                        <li><b>radio</b>：在多個選項中只能選一項，只要將name屬性設為相同，即會被視為同一組選項，例如：
+                            <pre>
+&lt;p&gt;
+    &lt;input type="radio" name="gender" value="male"&gt;男
+    &lt;input type="radio" name="gender" value="female"&gt;女
+&lt;/p&gt;</pre></li>
+                        <li><b>checkbox</b>：在多個選項中可以選擇一個以上的選項，只要將name屬性設為相同，即會被視為同一組選項，例如：
+                            <pre>
+&lt;p&gt;
+    &lt;input type="checkbox" name="musictype" value="metal"&gt;金屬
+    &lt;input type="checkbox" name="musictype" value="hiphop"&gt;嘻哈
+    &lt;input type="checkbox" name="musictype" value="blues"&gt;藍調
+    &lt;input type="checkbox" name="musictype" value="classic"&gt;古典
+&lt;/p&gt;</pre></li>
+                        <li><b>button、submit、reset</b>：完成表單填寫後，即可送出資料或重置將表單資料清空，其中value代表按鈕上顯示的文字，例如：
+                            <pre>
+&lt;p&gt;<
+    &lt;input type="submit" value="登入"&gt;
+    &lt;input type="reset" value="重置"&gt;
+    &lt;/p&gt;</pre></li>
+                    </ul>
+                    <p class="notes"><b>＊</b>不用 &lt;p&gt; .. &lt;/p&gt; 包起來的話，帳號密碼會呈現在同一列。)</p><br>
+                    <form>
+                        <p>帳號：<input type="text" name="username" size="20" maxlength="12"></p>
+                        <p>密碼：<input type="password" name="passwd" size="20" maxlength="12"></p>
+                        <P>性別：
+                            <input type="radio" name="gender" value="male">男
+                            <input type="radio" name="gender" value="female">女
+                        </P>
+                        <p>有興趣的音樂：
+                            <input type="checkbox" name="musictype" value="metal">金屬
+                            <input type="checkbox" name="musictype" value="blackmetal">黑金屬
+                            <input type="checkbox" name="musictype" value="melodymetal">旋律金屬
+                            <input type="checkbox" name="musictype" value="postmetal">前衛金屬
+                            <input type="checkbox" name="musictype" value="deathmetal">死亡金屬
+                        </p>
+                        <p>
+                            <input type="submit" value="註冊">
+                            <input type="reset" value="重置">
+                        </p>
+                    </form>
+                    <p class="notes"><b>＊</b>若 &lt;form&gt;標籤中沒有設定action，預設值會以GET的方式傳送到目前頁面。</p>
+                </div>
+            </div>
+
+                <div class="Article">
+                    <h3 id="輸入欄位的標籤">輸入欄位的標籤 &lt; label &gt;</h3>
+                    <div class="Paragraph">
+                    <p>
+                        在輸入表單時常常不會精準的點在輸入欄位上，而是欄位名稱。如果使用&lt; label &gt;來顯示欄位名稱，當點選欄位名稱時也會進入輸入欄位。
+                        若要使用&lt; label &gt;標籤，&lt; input &gt;就必須設定id屬性，因為&lt; label &gt;就是根據id屬性來對應，例如：
+                        <pre>&lt;p&gt;
+    &lt;label <b>for="username"</b>&gt;帳號：&lt;/label&gt;
+    &lt;input type="text" name="username" <b>id="username"</b>&gt;
+&lt;/p&gt;</pre>
+                        <pre>&lt;p&gt;
+    &lt;label <b>for="passwd"</b>&gt;密碼：&lt;/label&gt;
+    &lt;input type="password" name="passwd" <b>id="passwd"</b>&gt;
+&lt;/p&gt;</pre>
+                    </p>
+                    <form>
+                        <p><label for="userid">帳號：</label><input type="text" name="userid" id="userid"></p>
+                        <p><label for="passwd">密碼：</label><input type="password" name="passwd" id="passwd"></p>
+                    </form>
+                </div>
+            </div>
+
+            <div class="Article">
+                <h3 id="下拉式選單">下拉式選單 &lt; select &gt;、&lt; option &gt;</h3>
+                <div class="Paragraph">
+                    <p>
+                        表單中若需要在多個項目中選取一個或多個選項時，使用radio或checkbox都會佔用較大的顯示區域。下拉式選單可以將選項折疊起來，是較理想的顯示方式。基本語法如下：
+                        <pre>&lt;select name="欄位名稱"&gt;
+    &lt;option value="選項1回傳值"&gt;選項1&lt;/option&gt;
+    &lt;option value="選項2回傳值"&gt;選項2&lt;/option&gt;
+      ...
+    &lt;option value="選項n回傳值"&gt;選項n&lt;/option&gt;
+&lt;/select&gt;</pre>
+                    </p>
+                    <table width="85%">
+                        <tr>
+                            <th width="12%">屬性</th>
+                            <th>說明</th>
+                        </tr>
+                        <tr>
+                            <th>selected</th>
+                            <td>下拉式選單會以第一個選項為預設選項，若要使用其他選項為預設，可以在該選項&lt;option&gt;中加入selected屬性，如下：
+                                <pre>&lt;select name="欄位名稱"&gt;
+    &lt;option value="選項1回傳值"&gt;選項1&lt;/option&gt;
+    &lt;option value="選項2回傳值 <b>selected</b>"&gt;選項2&lt;/option&gt;
+    &lt;option value="選項3回傳值"&gt;選項3&lt;/option&gt;
+&lt;/select&gt;</pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>size</th>
+                            <td>下拉式選單預設只會顯示一個項目，若要一次顯示多個項目，可以在&lt;selected&gt;中加入size屬性，如下：
+                                <pre>&lt;select name="欄位名稱 <b>size="3"</b>&gt;
+    &lt;option value="選項1回傳值"&gt;選項1&lt;/option&gt;
+    &lt;option value="選項2回傳值"&gt;選項2&lt;/option&gt;
+    ...
+    &lt;option value="選項n回傳值"&gt;選項n&lt;/option&gt;
+&lt;/select&gt;</pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>multiple</th>
+                            <td>若想讓下拉式選單中可以多選，可以在&lt;selected&gt;中加入multiple屬性，使用者即可在選取時按著<b>Ctrl</b>鍵 ( Mac要按Command ) 不放選取多個選項，如下：
+                                <pre>&lt;select name="欄位名稱 size="4" <b>multiple</b>&gt;
+    &lt;option name="選項1回傳值"&gt;選項1&lt;/option&gt;
+    &lt;option name="選項2回傳值"&gt;選項2&lt;/option&gt;
+    ...
+    &lt;option name="選項n回傳值"&gt;選項n&lt;/option&gt;
+&lt;/select&gt;</pre>
+                            </td>
+                        </tr>
+                    </table><br>
+                    <p>您施打過哪些疫苗：
+                        <select name="vaccine" size="3" multiple>
+                            <option name="Moderna">莫德纳</option>
+                            <option name="AZ">AZ</option>
+                            <option name="BNT">BNT</option>
+                            <option name="MVC">高端</option>
+                            <option name="Coke">我都喝可樂殺菌</option>
+                            <option name="None">未施打</option>
+                        </select>
+                    </p>
+                </div>
+            </div>
+
+            <div class="Article">
+                <h3 id="文字區域">文字區域 &lt; textarea &gt;</h3>
+                <div class="Paragraph">
+                <p>
+                    文字欄位&lt; input type="text" &gt;雖然可以設定長度，但資料太多不好編輯與操作，此時可以使用&lt; textarea &gt;文字區域，基本語法如下：
+                    <pre>&lt;textarea name="欄位名稱" rows="長度" cols="寬度"&gt;
+    ...
+&lt;/textarea&gt;</pre>
+                </p>
+                <p>回饋與建議：</p>
+                    <textarea name="advice" rows="6" cols="42">
+  請留下您寶貴的建議</textarea>
+                </div>
+            </div>
+
+            <div class="Article">
+                <h3 id="表單群組元件">表單群組元件 &lt; fieldset &gt;、&lt; legend &gt;</h3>
+                <div class="Paragraph">
+                    <p>若表單中有很多不同類別的元件時，可以使用&lt; fieldset &gt;、&lt; legend &gt;來將相同目的的元件群組化並設定標題，語法如下：
+                        <pre>&lt;fieldset&gt;
+    &lt;legend&gt;群組表單名稱&lt;/legend&gt;
+    ...
+&lt;/fieldset&gt;</pre>
+                    </p>
+                </div>
+            </div>
+
+            <div class="Article">
+                <h3 id="HTML5新增的表單元件與屬性">HTML5 新增的表單元件與屬性</h3>
+                <div class="Paragraph">
+                    <p>注意！各家瀏覽器支援的程度不一，但隨著HTML5的普及，應該很快能在各個平台上執行。<br>
+                        HTML5新增的屬性：</p>
+                    <table>
+                        <tr>
+                            <th>元件</th>
+                            <th>說明</th>
+                        </tr>
+                        <tr>
+                            <td><img src="img/form_element_serch.png" width="256" hieght="128" alt="form_element_serch"></td>
+                            <td><b>搜尋輸入欄</b>：不同瀏覽器會有不同功能。<pre>&lt;input <b>type="search"</b>&gt;</pre></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/form_element_email.png" width="256" hieght="128" alt="form_element_email"></td>
+                            <td><b>電子郵件欄</b>：必須輸入電子郵件格式，否則無法送出。<pre>&lt;input <b>type="email"</b>&gt;</pre></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/form_element_url.png" width="256" hieght="128" alt="form_element_url"></td>
+                            <td><b>URL輸入欄</b>：必須輸入URL格式，否則無法送出。<pre>&lt;input <b>type="url"</b>&gt;</pre></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/form_element_tel.png" width="256" hieght="128" alt="form_element_tel"></td>
+                            <td><b>電話輸入欄</b>：在手機上使用會顯示數字鍵盤。<pre>&lt;input <b>type="tel"</b>&gt;</pre></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/form_element_number.png" width="256" hieght="128" alt="form_element_number"></td>
+                            <td><b>數字輸入欄</b>：只能輸入數字，旁邊會有增減按鈕。<pre>&lt;input <b>type="number"</b>&gt;</pre></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/form_element_date.png" width="256" hieght="128" alt="form_element_date"></td>
+                            <td><b>日期輸入欄</b>：會顯示年/月/日，可以使用小日曆選取。<pre>&lt;input <b>type="date"</b>&gt;</pre></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/form_element_range.png" width="256" hieght="128" alt="form_element_range"></td>
+                            <td><b>範圍輸入欄</b>：可以拖曳的移動軸。<pre>&lt;input <b>type="range"</b>&gt;</pre></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/form_element_color.png" width="256" hieght="128" alt="form_element_color"></td>
+                            <td><b>顏色輸入欄</b>：可以開啟顏色盤以選取顏色。<pre>&lt;input <b>type="color"</b>&gt;</pre></td>
+                        </tr>
+                    </table><br><br>
+
+                    HTML5新增的屬性：
+                    <table width="80%">
+                        <tr>
+                            <th>屬性</th>
+                            <th>說明</th>
+                        </tr>
+                        <tr>
+                            <th>autofocus</th>
+                            <td>網頁開啟後會自動將輸入線一到該欄位中。每個頁面只能設定一個具有autofocus的欄位。
+                                <pre>&lt;input type="text" <b>autofocus</b>&gt;</pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>autocomplete</th>
+                            <td>依照歷史輸入值自動填入表單，預設為「on」，若要關閉可以設定為「off」。
+                                <pre>&lt;input type="text" <b>autocomplete="off"</b>&gt;</pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>placeholder</th>
+                            <td>在欄位中顯示提示文字。
+                                <pre>&lt;input type="text" <b>placeholder="請輸入文字"</b>&gt;</pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>required</th>
+                            <td>設定該元件為必填。
+                                <pre>&lt;input type="text" <b>required</b>&gt;</pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>min/max/step</th>
+                            <td>設定數字、日期、時間欄位的最小、最大值及遞增值。
+                                <pre>&lt;input type="number" <b>min="1" max="99" step="3"</b>&gt;</pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>pattern</th>
+                            <td>設定正規表達式來規範輸入值的格式，適用在text、date、search、url、tel、email及password的欄位中。例如：
+                                <ul>
+                                    <li>輸入值第一個字必須為大小寫英文或數字：<pre>&lt;input type="text" <b>pattern="[a-zA-Z0-9]"</b>&gt;</pre></li>
+                                    <li>輸入值前三個字必須為大小寫英文或數字：<pre>&lt;input type="text" <b>pattern="[a-zA-Z0-9]{3}"</b>&gt;</pre></li>
+                                    <li>輸入值全部都必須為大小寫英文或數字：<pre>&lt;input type="text" <b>pattern="[a-zA-Z0-9]*"</b>&gt;</pre></li>
+                                    <li>驗證輸入內容是否為電子郵件格式：<pre>&lt;input type="email" 
+    <b>pattern="[a-z0-9._-+%]+@[a-z0-9.-]+\.[a-z]{2,4}$"</b>&gt;</pre></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+
+            <div id="exampleFORM">
+                <form>
+                    <fieldset>
+                        <legend><h3 class="FormTitle">請留下你的個資</h3></legend>
+                        <p><label for="username">姓名：</label><input type="text" name="username" id="username" placeholder="請輸入本名" required></p>
+                        <p><label for="IDnumber">身分證字號：</label><input type="password" name="IDnumber" id="IDnumber" placeholder="給我你的身分證" required></p>
+                        <p><label for="mobilenumber">手機：</label><input type="tel" name="mobilenumber" id="mobilenumber" placeholder="給我號碼，不是你的iphone" autocomplete="off" required></p>
+                        <p><label for="email">電子郵件：</label><input type="email" name="email" id="email" autocomplete="off" placeholder="不會寄木馬給你" required></p>
+                        <p><label for="birth">生日：</label><input type="date" name="birth" id="birth" autocomplete="off" required></p>
+                        <P>性別：
+                            <input type="radio" name="gender" value="male" id="male" autocomplete="off" required><label for="male">男</label>
+                            <input type="radio" name="gender" value="female" id="female" autocomplete="off" required><label for="female">女</label>
+                        </P>
+                        <p>有興趣的音樂：
+                            <input type="checkbox" name="musictype" value="metal" id="metal" ><label for="metal">金屬</label>
+                            <input type="checkbox" name="musictype" value="blackmetal" id="blackmetal" ><label for="blackmetal">黑金屬</label>
+                            <input type="checkbox" name="musictype" value="melodymetal" id="melodymetal" ><label for="melodymetal">旋律金屬</label>
+                            <input type="checkbox" name="musictype" value="postmetal" id="postmetal" ><label for="postmetal">前衛金屬</label>
+                            <input type="checkbox" name="musictype" value="deathmetal" id="deathmetal" ><label for="deathmetal">死亡金屬</label>
+                        </p>
+                        <p>您施打過哪些疫苗：
+                            <select name="vaccine" size="3" autocomplete="off" multiple>
+                                <option name="Moderna">莫德纳</option>
+                                <option name="AZ">AZ</option>
+                                <option name="BNT">BNT</option>
+                                <option name="MVC">高端</option>
+                                <option name="Coke">我都喝可樂殺菌</option>
+                                <option name="None">未施打</option>
+                            </select>
+                        </p>
+                        <p>回饋與建議：</p>
+                        <textarea name="advice" rows="6" cols="42">請留下您寶貴的建議</textarea>
+                        <p>
+                            <input type="submit" value="註冊">
+                            <input type="reset" value="重置">
+                        </p>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
