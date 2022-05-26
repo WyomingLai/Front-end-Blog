@@ -216,7 +216,6 @@
         background-color: #6d7c67;
         text-align: center;
         position: relative;
-        overflow: scroll;
         float:left;
         z-index:20;
     }
