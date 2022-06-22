@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang='zh_TW'>
+<head>
+    <link rel="stylesheet" href="{% static 'blog/Blog.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <meta charset='utf-8'/>
+    <title>Front-end Basic</title>
+</head>
+
+<body>
+    <div class="Header">
+        <a href="http://127.0.0.1:8000/blog/"><b>F</b>ront-end <b>B</b>asic</a>
+        <ul class="Header-sections">
+            <li class="Header-section HTML"><a href="HTML/">HTML</a></li>
+            <li class="Header-section CSS"><a href="CSS/">CSS</a></li>
+            <li class="Header-section JavaScript"><a href="JavaScript/">JavaScript</a></li>
+            <li class="Header-section Python"><a href="#Python">Python</a></li>
+        </ul>
+    </div>
+
+    <div class="Container HomePage">
+        <div class="HomePageContent">
+            <div class="HomePageBox HTMLbox">
+                <h1 id="HTMLboxHead">&lt;HTML&gt;</h1>
+                <div id="HTMLboxTextWrap"></div>
+                <div id="HTMLtyping">
+                    <p>&lt;div&gt;<br>&emsp;&emsp;&lt;h1&gt;&ensp;HELLO WORLD&ensp;&lt;/h1&gt;<br>&emsp;&emsp;&lt;p&gt;&ensp;張雨生去從森林扛了一根木頭出來，請問木頭怎麼來的？&lt;/p&gt;</p>
+                    <p>&lt;div&gt;<br>&emsp;&emsp;&lt;h1&gt;&ensp;HELLO WORLD&ensp;&lt;/h1&gt;<br>&emsp;&emsp;&lt;p&gt;&ensp;與生俱來的。&lt;/p&gt;</p>
+                    <p>&lt;div&gt;<br>&emsp;&emsp;&lt;h1&gt;&ensp;HELLO WORLD&ensp;&lt;/h1&gt;<br>&emsp;&emsp;&lt;h2&gt;&ensp;CLICK HERE TO SEE MORE JOKES&ensp;&lt;/h2&gt;<br>...</p>
+                    <p>&lt;div&gt;<br>&emsp;&emsp;&lt;h1&gt;&ensp;HELLO WORLD&ensp;&lt;/h1&gt;<br>&emsp;&emsp;&lt;h2&gt;&ensp;CLICK HERE TO SEE MORE INFO&ensp;&lt;/h2&gt;<br>...</p>
+                </div>
+                <h1 id="HTMLboxTextMORE">MORE</h1>
+                <a href="HTML/"><div id="HTMLboxlink"></div></a>
+            </div>
+            <div id="HomePageBox-wrap">
+                <div class="HomePageBox CSSbox">
+                    <span id="CSSboxHead"><span id="C"></span><span id="S"></span><span id="SS"></span></span>
+                    <div id="CSSboxTextWrap"></div>
+                    <h1 id="CSSboxTextMORE">MORE</h1>
+                    <a href="CSS/"><div id="CSSboxlink"></div></a>
+                </div>
+                <div class="HomePageBox JavaScriptbox">
+                    <span id="JSboxHead">JavaScript</span>
+                    <div id="JSboxTextWrap"></div>
+                    <h1 id="JSboxTextMORE">MORE</h1>
+                    <a href="JavaScript/"><div id="JSboxlink"></div></a>
+                </div>
+            </div>
+            <div class="HomePageBox Pythonbox">
+                <span id="PythonboxHead">PYTHON</span>
+                <div id="PYrobotWrap"><img src="{% static 'blog/img/ROBOT.png' %}" id="PYrobot"></div>
+                <h1 id="PythonboxMORE">MORE</h1>
+                <a href="#Python"><div id="PYboxlink"></div></a>
+            </div>
+            <div class="HomePageBox Forumbox">
+                <span id="ForumboxHead">Forum</span>
+                <h1 id="ForumboxMORE">MORE</h1>
+                <a href="Forum/"><div id="Forumboxlink"></div></a>
+            </div>
+            
+            <a href="http://127.0.0.1:8000/home/" id="WYOMING" target="_blank">WYOMING</a>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+
+<script>
+    var typed = new Typed('#HTMLboxTextWrap', {
+        stringsElement: '#HTMLtyping',
+        typeSpeed: 100,
+        loop:true,
+        backDelay: 1000,
+    });
+
+
+</script>
+
+

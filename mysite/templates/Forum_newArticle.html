@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang='zh_TW'>
+<head>
+    <link rel="stylesheet" href="{% static 'blog/Forum.css' %}">
+    <script src="{% static 'ckeditor/ckeditor/plugins/prism/lib/prism/prism_patched.min.js' %}"></script>
+
+    <meta charset='utf-8'/>
+    <title>New Article</title>
+    <script src="https://cdn.ckeditor.com/4.19.0/standard/ckeditor.js"></script>
+</head>
+
+<body>
+    <div class="Header">
+        <a href="http://127.0.0.1:8000/blog/"><b>F</b>ront-end <b>B</b>asic</a>
+        <ul class="Header-sections">
+            <li class="Header-section HTML"><a href="../../HTML/">HTML</a></li>
+            <li class="Header-section CSS"><a href="../../CSS/">CSS</a></li>
+            <li class="Header-section JavaScript"><a href="../../JavaScript/">JavaScript</a></li>
+            <li class="Header-section Python"><a href="#Python">Python</a></li>
+        </ul>
+    </div>
+
+    <div class="Container">
+
+        
+        <div class="Content">
+            {% block content %}
+            <form action="" method="post">
+                {% csrf_token %}
+
+                <label>{{ form.title.label }}</label>
+                {{ form.title }}
+                <br><br>
+
+                {{ form.media }}
+                {{ form.content }}
+                
+
+                <p>
+                    <input type="submit" value="上傳文章">
+                </p>
+            </form>
+            {% endblock %}
+
+
+        </div>
+    </div>
+</body>
+
+</html>
+

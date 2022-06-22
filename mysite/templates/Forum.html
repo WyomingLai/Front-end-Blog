@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang='zh_TW'>
+<head>
+    <link rel="stylesheet" href="{% static 'blog/Forum.css' %}">
+    <script src="{% static 'ckeditor/ckeditor/plugins/prism/lib/prism/prism_patched.min.js' %}"></script>
+    <meta charset='utf-8'/>
+    <title>Forum</title>
+    <script src="https://cdn.ckeditor.com/4.19.0/standard/ckeditor.js"></script>
+</head>
+
+<body>
+    <div class="Header">
+        <a href="http://127.0.0.1:8000/blog/"><b>F</b>ront-end <b>B</b>asic</a>
+        <ul class="Header-sections">
+            <li class="Header-section HTML"><a href="../HTML/">HTML</a></li>
+            <li class="Header-section CSS"><a href="../CSS/">CSS</a></li>
+            <li class="Header-section JavaScript"><a href="../JavaScript/">JavaScript</a></li>
+            <li class="Header-section Python"><a href="#Python">Python</a></li>
+        </ul>
+    </div>
+
+    <div class="Container">
+        
+
+
+        <div class="Content">
+            <div class="ContentNav">TAG：
+                <a href="" class="tag">HTML</a>
+                <a href="" class="tag">CSS</a>
+                <a href="" class="tag">JavaScript</a>
+                <a href="" class="tag">Python</a>
+                <a href="" class="tag">Other</a>
+                
+                <a href="newArticle/" id="newArticle" >＋新增文章</a>
+            </div><br><br>
+            
+            {% for post in post_list %}
+            <div class="Article">
+                <h1>{{ post.title }}</h1>
+                {{ post.content|safe|truncatewords_html:3 }}
+                <span class="ReadMore">{{ post.created_at|date:"Y / m / d" }}</span>
+                <a href="{{ post.id }}"><div class="post_linkbox"></div></a>
+            </div>
+            {% endfor %}
+
+            
+        </div>
+    </div>
+</body>
+
+</html>
+
