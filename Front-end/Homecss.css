@@ -1,0 +1,545 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+
+@keyframes homepage-text {
+    from { color: rgba(0, 0, 0,0);}
+    to { color: black;}
+}
+@keyframes homepage-hr{
+    from {border:solid 0.08em #ffffff;}
+    to {border:solid 0.08em #c7c7c7;}
+}
+@keyframes homepage-side {
+    from {top: -600px;}
+    to {top: 0px;}
+}
+@keyframes homepage-photo {
+    0% {top: 1200px;}
+    80% {top: 40px;}
+    100% {top: 40px;}
+}
+@keyframes portfolio-photo {
+    0% {top: 40px;}
+    90% {top: 1100px;}
+    100% {top: 1200px;}
+}
+@keyframes contact-icon-appear {
+    from {bottom:-35%}
+    to {bottom:35%}
+}
+@keyframes contact-info-appear {
+    from {bottom:-56%}
+    to{bottom:14%}
+}
+@keyframes contact-icon-disappear {
+    from {bottom:35%}
+    to {bottom:-35%}
+}
+@keyframes contact-info-disappear {
+    from {bottom:14%}
+    to{bottom:-56%}
+}
+@keyframes to-portfolio {
+    0% {left:150%; opacity: 0;}
+    50% {opacity: 0.2;}
+    100% {left:0%; opacity: 1;}
+}
+@keyframes leave-portfolio {
+    0% {left:0%}
+    100% {left:-100%}
+}
+
+
+
+@media screen and (min-width: 850px) {
+    body {
+        width: 100vh;
+        height: 100vh;
+        margin: 0px;
+        padding: 0px;
+    }
+    #header {
+        background-color:#bababa;
+        height: 90px;
+        padding: 0px;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #left-header {
+        width: 70%;
+        height: 100%;
+        color: black;
+        background-color: rgb(255, 255, 255);
+        line-height: 90px;
+        display: relative;
+    }
+    #logo {
+        padding: 0px 70px;
+        font: bold x-large/75px 'Noto Sans TC', sans-serif;
+        line-height: 90px;
+        text-decoration: none;
+        color: rgb(21, 21, 21);
+        float: left;
+    }
+    #header_nav {
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        right: 35%;
+    }
+    .section {
+        height: 100%;
+        padding: 0px 10px;
+        margin: 0px;
+        color: rgb(21, 21, 21);
+        text-decoration: none;
+        line-height: 90px;
+        float: left;
+    }
+
+    #hamBar-list {
+        list-style-type: none;
+        display: none;
+    }
+    #right-header {
+        width: 30%;
+        height: 100%;
+        color: white;
+        background-color: #6d7c67;
+        line-height: 90px;
+        text-align: center;
+    }
+    #search {
+        font-size: 1em;
+        float: left;
+        margin-top: 30px;
+        margin-left: 50px;
+        width: 40%;
+        height: 30px;
+        color: white;
+        line-height: 30px;
+        background-color: #6d7c67;
+        border-style: none;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-bottom-color: white;
+        outline: none;
+    }
+    
+    .Container {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        top:90px;
+        left:0px;
+        right:0px;
+    }
+    
+    .home-photo {
+        position: absolute;
+        top: 40px;
+        left: -150px;
+        z-index:99;
+	    width: 300px;
+	    height: 450px;
+	    border-radius: 150px;
+        animation-play-state: running;
+        animation: homepage-photo 1s ease;
+    }
+    .home-photo::after {
+        content: " ";
+        position: absolute;
+        top: 40px;
+        left: -160px;
+        z-index:90;
+	    width: 300px;
+	    height: 450px;
+	    border-radius: 150px;
+        background-color: #6d6d6d;
+        animation-play-state: running;
+        animation: homepage-photo 1s ease;
+    }
+
+    #Container-Home .main {
+        width: 70%;
+        height:100%;
+        min-height: 700px;
+        background-color: rgb(255, 255, 255);
+        float:left;
+        z-index:10;
+    }
+    #Container-Home .side {
+        width: 30%;
+        height:100%;
+        min-height: 700px;
+        background-color: #6d7c67;
+        text-align: center;
+        position: relative;
+        float:left;
+        z-index:20;
+        animation: homepage-side 1s ease;
+    }
+    #Container-About .main {
+        width: 70%;
+        height:100%;
+        min-height: 700px;
+        background-color: rgb(255, 255, 255);
+        overflow: scroll;
+        float:left;
+        z-index:10;
+    }
+    #Container-About .side {
+        width: 30%;
+        height:100%;
+        min-height: 700px;
+        background-color: #6d7c67;
+        text-align: center;
+        position: relative;
+        float:left;
+        z-index:20;
+    }
+    #Container-Portfolio .main {
+        width: 70%;
+        height:100%;
+        min-height: 700px;
+        background-color: rgb(255, 255, 255);
+        overflow: scroll;
+        float:left;
+        position: relative;
+        z-index:10;
+    }
+    #Container-Portfolio .side {
+        width: 30%;
+        height:100%;
+        min-height: 700px;
+        background-color: #6d7c67;
+        text-align: center;
+        position: relative;
+        float:left;
+        z-index:20;
+    }
+    .portfolioArticlesWrap {
+        width: 80%;
+        position: relative;
+        margin: 80px 30% 100px 10%;
+        text-align: left;
+    }
+    .portfolio {
+        margin-top: 60px;
+        width:100%;
+        min-width: 540px;
+        height: 200px;
+
+    }
+    .portfolioPHOTO {
+        width:250px;
+        float:left;
+    }
+    .portfolioTEXT {
+        max-width:60%;
+        min-width:50%;
+        margin-left: 260px;
+    }
+    .portfolioSIDE {
+        margin:20px auto;
+        width:80%;
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width: 850px) {
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+    #header {
+        background-color:#bababa;
+        height: 90px;
+        padding: 0px;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #left-header {
+        width: 100%;
+        height: 100%;
+        color: black;
+        background-color: rgb(255, 255, 255);
+        line-height: 90px;
+        display: relative;
+    }
+    #header_nav {
+        display: none;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        right: 35%;
+    }
+    .section {
+        height: 100%;
+        padding: 0px 10px;
+        margin: 0px;
+        color: rgb(21, 21, 21);
+        text-decoration: none;
+        line-height: 90px;
+        float: left;
+    }
+
+    #hamBar-list {
+        line-height: 35px;
+        padding: 0px 70px;
+        background-color: #6d7c67;
+        position: fixed;
+        top:90;
+        right: 0;
+        left: 0;
+        z-index: 60;
+        list-style-type: none;
+        display: inline;
+    }
+    #hamBar-list a {
+        padding: 5px;
+        margin: 0px 5px;
+        line-height: 35px;
+        color: white;
+        text-decoration: none;
+        float: left;
+    }
+    #hamBar-list a:hover {
+        padding: 5px;
+        margin: 0px 5px;
+        line-height: 35px;
+        color: white;
+        background-color: #9ab09c;
+        text-decoration: none;
+    }
+    #right-header {
+        display: none;
+        width: 30%;
+        height: 100%;
+        color: white;
+        background-color: #6d7c67;
+        line-height: 90px;
+        text-align: center;
+    }
+
+    .Container {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    #Container-Home .main {
+        margin: 0px auto;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(255, 255, 255);
+        position: fixed;
+        top: 90px;
+        left: 0px;
+    }
+    #Container-About .main {
+        margin: 0px auto;
+        width: 100%;
+        height: 100%;
+        min-height: 700px;
+        background-color: rgb(255, 255, 255);
+        overflow: scroll;
+        position: fixed;
+        top: 90px;
+        left: 0px;
+        z-index:10;
+    }
+    #Container-Portfolio .main {
+        margin: 0px auto;
+        width: 100%;
+        height: 100%;
+        min-height: 700px;
+        background-color: rgb(255, 255, 255);
+        overflow: scroll;
+        position: fixed;
+        top: 90px;
+        left: 0px;
+        z-index:10;
+    }
+    
+    #Container-Home .side {
+        display: none;
+        width: 30%;
+        height: 100%;
+        background-color: #6d7c67;
+        text-align: center;
+        position: fixed;
+        top: 90px;
+        left: 70%;
+    }
+    #Container-About .side {
+        display: none;
+        width: 30%;
+        height:100%;
+        min-height: 700px;
+        background-color: #6d7c67;
+        text-align: center;
+        position: relative;
+        float:left;
+        z-index:20;
+    }
+    #Container-Portfolio .side {
+        display: none;
+        width: 30%;
+        height:100%;
+        min-height: 700px;
+        background-color: #6d7c67;
+        text-align: center;
+        position: relative;
+        float:left;
+        z-index:20;
+    }
+    #logo {
+        padding: 0px 70px;
+        font: bold x-large/75px 'Noto Sans TC', sans-serif;
+        line-height: 90px;
+        text-decoration: none;
+        color: rgb(21, 21, 21);
+        float: left;
+    }
+    .home-photo {
+        display: none;
+        position: absolute;
+        top: 40px;
+        right: -150px;
+        z-index:99;
+        background: #6d6d6d;
+	    width: 300px;
+	    height: 450px;
+	    border-radius: 150px;
+        text-align: center;
+        animation: homepage-photo 1s ease;
+    }
+    .portfolioArticlesWrap {
+        width: 80%;
+        position: relative;
+        margin: 80px 30% 100px 10%;
+        text-align: left;
+    }
+    .portfolio {
+        margin-top: 60px;
+        width:100%;
+        min-width: 540px;
+        height: 200px;
+
+    }
+    .portfolioPHOTO {
+        width:250px;
+        float:left;
+    }
+    .portfolioTEXT {
+        max-width:60%;
+        min-width:50%;
+        margin-left: 260px;
+    }
+    .portfolioSIDE {
+        margin:20px auto;
+        width:80%;
+    }
+    
+}
+
+
+
+* {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+*::-webkit-scrollbar {
+    display: none;
+}
+p {font-family: 'Noto Sans TC', sans-serif;}
+a[href] {font-family: 'Noto Sans TC', sans-serif;}
+
+.section:hover {
+    color:#ffffff;
+    background-color: #a8b8a0f4;
+}
+.main h1 {
+    position: relative;
+    font-size: 3em;
+    animation: homepage-text 1s ease ;
+}
+.main h2 {
+    position: relative;
+    font-size: 1.9em;
+    line-height: 0.3em;
+    animation: homepage-text 1s ease ;
+}
+.main p {
+    position: relative;
+    font-size: 1em;
+    line-height: 1.8em;
+    animation: homepage-text 2s ease ;
+}
+.main hr {
+    position: relative;
+    border:solid 0.08em #c7c7c7;
+    animation: homepage-hr 1s ease ;
+}
+.main-content {
+    width: 65%;
+    position: relative;
+    margin: 100px 30% 100px 10%;
+    text-align: left;
+}
+.contact-icon-wrap {
+    width:40px;
+    height:120px;
+    position: absolute;
+    bottom:35%;
+    right:38px;
+}
+.contact-icon {
+    margin: 10px;
+    color: white;
+    width: 30px;
+}
+.contact-info {
+    padding:25px;
+    color: #dbdedb;
+    font-size: 0.8em;
+    text-align: right;
+    position: absolute;
+    bottom:14%;
+    right:0;
+}
+.skills-table {
+    width:100%;
+}
+.skills-table td {
+    height: 1.8em;
+}
+.side h1{
+    color:#e9eee9;
+}
+.side h3{
+    text-align: left;
+    color:#cdd2cd;
+}
+.side hr{
+    color:#cdd2cd;
+    border: 1px dashed #cdd2cd;
+}
+
